@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  wather-app:
+    container_name: wather-app
+    hostname: wather-app
+    image: wather-app
+    tty: true
+    build:
+      context: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./app:/code/app
+      - /code/app/node_modules
